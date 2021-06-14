@@ -1,11 +1,18 @@
 <template>
-  <div class="home">
-    <h1>Vuechat</h1>
+  <div class="">
+    <Login />
+    <Register />
   </div>
 </template>
 
 <script>
+import Login from '../components/auth/Login'
+import Register from '../components/auth/Register'
 export default {
   name: 'Home',
+  components: {
+    Login,
+    Register,
+  },
 }
 </script>
