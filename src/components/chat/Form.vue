@@ -1,11 +1,13 @@
 <template>
-  <form action="" class="d-flex">
+  <form action="" class="d-flex chat-form">
     <input
       type="text"
       class="form-control rouned-0"
       placeholder="Type your messages..."
     />
-    <button class="btn btn-primary rounded-0">Send</button>
+    <button class="btn btn-primary rounded-0">
+      <i class="fas fa-paper-plane"></i>
+    </button>
   </form>
 </template>
 
