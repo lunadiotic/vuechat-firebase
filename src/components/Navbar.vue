@@ -21,7 +21,7 @@
         </ul>
         <ul class="navbar-nav">
           <li class="nav-item">
-            <a class="nav-link" href="#">Logout</a>
+            <a class="nav-link" href="#" @click="handleLogout">Logout</a>
           </li>
         </ul>
       </div>
@@ -30,7 +30,21 @@
 </template>
 
 <script>
-export default {}
+import useLogout from '../composable/useLogout'
+export default {
+  setup() {
+    const { error, logout } = useLogout()
+
+    const handleLogout = async () => {
+      await logout()
+      if (!error.value) {
+        console.log('user logged out')
+      }
+    }
+
+    return { handleLogout }
+  },
+}
 </script>
 
 <style></style>
